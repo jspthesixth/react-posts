@@ -59,7 +59,7 @@ const PostDetail = ({ userId, id, title, body }: PostDetailProps) => {
         <div>
           <Link to={`/post/${id}`}>Title: {title}</Link>
         </div>
-        <div>by {users.find(({ id }) => id === userId)!.name}</div>
+        <div>by {users.find(({ id }) => id === userId)?.name}</div>
       </PostHeader>
       <PostBody>{body}</PostBody>
       {!isCommentsVisible && ( // once loaded, they can't be toggled
